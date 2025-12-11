@@ -10,6 +10,7 @@ export default function App() {
   const [birdBottom,setBirdBottom] = useState(sreenHeight / 2); 
   const gravity = 3;
   let gameTimerId;
+  const birdColor = "#f00";
 
   useEffect(() => {
     if (birdBottom > 0){
@@ -27,7 +28,7 @@ export default function App() {
     
 
     <View style={styles.container}>
-      <Bird birdBottom={birdBottom} birdLeft={birdLeft} />
+      <Bird birdBottom={birdBottom} birdLeft={birdLeft} color={birdColor}/>
       <StatusBar style="auto" />
     </View>
   );
